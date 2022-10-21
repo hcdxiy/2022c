@@ -91,3 +91,65 @@ int main()
     if( 999 ) printf("999成立\n");
     if( "a==0" ) printf("不管甚麼東西，幾乎都成立\n");
 }
+```
+
+## step01-1 int整數型別
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n = 1234567812345678;
+    printf("%d\n",n);
+    long long int a = 1234567812345678;
+    printf("%lld\n", a);
+}
+```
+
+## step02-1 最大公因數
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a, b;
+    scanf("%lld%lld", &a, &b);
+    long long int ans;
+    for(long long int i = 1; i<=a; i++){
+        if(a%i==0 && b%i==0 ) ans = i;
+    }
+    printf("答案是:%lld\n", ans);
+}
+```
+
+## step02-2 輾轉相除法
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a, b, c;
+    scanf("%lld%lld", &a, &b );
+
+    while(1){
+        c = a%b;
+        printf("%lld%lld%lld\n", a, b, c);
+        if(c==0) break;
+        a=b;
+        b=c;
+    }
+    printf("答案是:%lld\n", b);
+}
+```
+
+## step03-1 剝皮法
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("請輸入數字: ");
+    int n;
+    scanf("%d", &n);
+    while( n>0 ){
+        printf("%d\n", n%2);
+        n = n /2;
+    }
+}
+```
