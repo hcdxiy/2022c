@@ -268,3 +268,56 @@ int main()
         printf("%d",a[i]);
     }
 }
+```
+
+# Week12
+## step01-1 泡泡排序法
+```cpp
+#include <stdio.h>
+int a[5] = {5,4,3,2,1};
+int main()
+{
+    for(int i=0; i<5; i++){
+        for(int j=i+1; j<5; j++){
+            if( a[i] >a[j]){
+                int temp=a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    for(int i=0; i<5; i++) printf("%d ", a[i]);
+}
+```
+
+# Week12
+##step02-1 二維陣列
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a;
+    int b=10;
+    int c[3];
+    int d[3]={10,20,30};
+    int g[2][3];
+    int h[2][3] = { {10,20,30},{40,50,60} };
+}
+```
+
+# Week12
+##step02_2 左手i、右手j
+```cpp
+#include <stdio.h>
+int main()
+{
+
+    int a[2][3]={{10,20,30},{40,50,60}};
+    for(int i=0; i<2; i++){
+        for(int j=0; j<3; j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
